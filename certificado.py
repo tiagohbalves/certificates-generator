@@ -1,4 +1,5 @@
 """Gera os certificaso e salva em um pdf conforme nome"""
+import math
 import os
 from xhtml2pdf import pisa             # import python module
 from modelos import tipos, SOURCE_HTML
@@ -22,10 +23,17 @@ def get_text_certificado(data):
         "palestrante",
         "organizador"
         ]
+    matricula_texto = ''
+
+    if not math.isnan(data.matricula) and isinstance(data.matricula, float):
+        matricula_texto = f' matricula <strong><i>{int(data.matricula)}</i></strong>, '
+
     if data["tipo"] in tipo_unico:
-        texto = tipos[data["tipo"]].format(data["nome"])
+        texto = tipos[data["tipo"]].format(data["nome"], matricula_texto)
     else:
-        texto = tipos[data["tipo"]].format(data["title"], data["nome"])
+        texto = tipos[data["tipo"]].format(data["title"], data["nome"],
+                                           matricula_texto
+                                           )
 
     return texto
 

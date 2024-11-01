@@ -2,41 +2,41 @@
 
 tipos = {
     "participante": """
-      Certificamos que <strong><i>{}</i></strong>,
+      Certificamos que <strong><i>{}</i></strong>,{}
        participou do <strong>III Encontro Capixaba
         de Física/SBF (III ECF/SBF)</strong>, realizado na Universidade Federal
         do Espírito Santo, campus de São Mateus, no período de 30 de outubro
         de 2024 a 01 de novembro de 2024.""",
     "poster": """
       Certificamos que o trabalho de título <strong><i>{}</i></strong>,
-        foi apresentado por <strong><i>{}</i></strong>, na forma de
+        foi apresentado por <strong><i>{}</i></strong>,{} na forma de
         <strong>Pôster</strong> no <strong>III Encontro Capixaba
         de Física/SBF (III ECF/SBF)</strong>, realizado na Universidade
         Federal do Espírito Santo, campus de São Mateus, no período de 30 de
         outubro de 2024 a 01 de novembro de 2024.""",
     "comunicaco": """
       Certificamos que o trabalho de título <strong><i>{}</i></strong>,
-        foi apresentado por <strong><i>{}</i></strong> na forma de
+        foi apresentado por <strong><i>{}</i></strong>,{} na forma de
         <strong>Comunicação Oral</strong> no
         <strong>III Encontro Capixaba
         de Física/SBF (III ECF/SBF)</strong>, realizado na Universidade Federal
         do Espírito Santo, campus de São Mateus, no período de 30 de outubro
         de 2024 a 01 de novembro de 2024.""",
     "palestrante": """
-      Certificamos que o <strong><i>{}</i></strong>, participou como
+      Certificamos que <strong><i>{}</i></strong>, participou como
       <strong>Palestrante</strong> no <strong>III Encontro Capixaba
         de Física/SBF (III ECF/SBF)</strong>, realizado na Universidade Federal
         do Espírito Santo, campus de São Mateus, no período de 30 de outubro
         de 2024 a 01 de novembro de 2024.""",
     "organizador": """
-      Certificamos que <strong><i>{}</i></strong>, participou da
+      Certificamos que <strong><i>{}</i></strong>,{} participou da
       <strong>Organização</strong> do <strong>III Encontro Capixaba
         de Física/SBF (III ECF/SBF)</strong>, realizado na Universidade Federal
         do Espírito Santo, campus de São Mateus, no período de 30 de outubro
         de 2024 a 01 de novembro de 2024.""",
     "mco_pg": """
       Certificamos que o trabalho de título <strong><i>{}</i></strong>,
-        apersentado por <strong><i>{}</i></strong>, foi avaliado
+        apersentado por <strong><i>{}</i></strong>,{} foi avaliado
         como melhor <strong>Comunicação Oral</strong> na seção de
         <strong>Pós-Graduação</strong>
         apresentado no <strong>III Encontro Capixaba de Física/SBF
@@ -45,7 +45,7 @@ tipos = {
         de 2024 a 01 de novembro de 2024.""",
     "mco_ic": """
       Certificamos que o trabalho de título <strong><i>{}</i></strong>,
-        apresentado por <strong><i>{}</i></strong>, foi avaliado
+        apresentado por <strong><i>{}</i></strong>,{} foi avaliado
         como melhor <strong>Comunicação Oral</strong> na seção de
         <strong>Iniciação Científica</strong>
         apresentado no <strong>III Encontro Capixaba de Física/SBF
@@ -54,7 +54,7 @@ tipos = {
         de 2024 a 01 de novembro de 2024.""",
     "mco_em": """
       Certificamos que o trabalho de título <strong><i>{}</i></strong>,
-        apresentado por <strong><i>{}</i></strong>, foi avaliado
+        apresentado por <strong><i>{}</i></strong>,{} foi avaliado
         como melhor <strong>Comunicação Oral</strong> na seção de
         <strong>Ensino Médio</strong>
         apresentado no <strong>III Encontro Capixaba de Física/SBF
@@ -63,7 +63,7 @@ tipos = {
         de 2024 a 01 de novembro de 2024.""",
     "mh_co": """
       Certificamos que o trabalho de título <strong><i>{}</i></strong>,
-        apresentado por <strong><i>{}</i></strong>, recebeu <strong>
+        apresentado por <strong><i>{}</i></strong>,{} recebeu <strong>
         Menção Honrosa</strong> com a <strong>Comunicação Oral</strong>
         apresentado no <strong>III Encontro Capixaba de Física/SBF
         (III ECF/SBF)</strong>, realizado na Universidade Federal
@@ -71,7 +71,7 @@ tipos = {
         de 2024 a 01 de novembro de 2024.""",
     "mh_po": """
       Certificamos que o trabalho de título <strong><i>{}</i></strong>,
-        apresentado por <strong><i>{}</i></strong>, recebeu <strong>
+        apresentado por <strong><i>{}</i></strong>,{} recebeu <strong>
         Menção Honrosa</strong> com a <strong>Pôster</strong>
         apresentado no <strong>III Encontro Capixaba de Física/SBF
         (III ECF/SBF)</strong>, realizado na Universidade Federal
@@ -79,7 +79,7 @@ tipos = {
         de 2024 a 01 de novembro de 2024.""",
     "mp_em": """
       Certificamos que o trabalho de título <strong><i>{}</i></strong>,
-        apresentado por <strong><i>{}</i></strong>, foi avaliado
+        apresentado por <strong><i>{}</i></strong>,{} foi avaliado
         como melhor <strong>Pôster</strong> na seção de <strong>
         Ensino médio</strong>
         apresentado no <strong>III Encontro Capixaba de Física/SBF
@@ -88,7 +88,7 @@ tipos = {
         de 2024 a 01 de novembro de 2024.""",
     "mp_ic": """
       Certificamos que o trabalho de título <strong><i>{}</i></strong>,
-        apresentado por <strong><i>{}</i></strong>, foi avaliado
+        apresentado por <strong><i>{}</i></strong>,{} foi avaliado
         como melhor <strong>Pôster</strong na seção de <strong>
         Iniciação Científica</strong>
         apresentado no <strong>III Encontro Capixaba de Física/SBF
@@ -97,7 +97,7 @@ tipos = {
         de 2024 a 01 de novembro de 2024.""",
     "mp_pg": """
       Certificamos que o trabalho de título <strong><i>{}</i></strong>,
-        apresentado por <strong><i>{}</i></strong>, foi avaliado
+        apresentado por <strong><i>{}</i></strong>,{} foi avaliado
         como melhor <strong>Pôster</strong na seção de <strong>
         Pós-Graduação</strong>
         apresentado no <strong>III Encontro Capixaba de Física/SBF

@@ -15,7 +15,7 @@ def send_email(recieve, recipients, certificate_files):
     password = os.getenv('PASS')
     sender = os.getenv('EMAIL')
     message = MIMEMultipart()
-    
+
     body_msg = MIMEText((EMAIL_DEF['email_body'] % recieve), 'html')
     message['From'] = sender
     message['To'] = ', '.join(recipients)
