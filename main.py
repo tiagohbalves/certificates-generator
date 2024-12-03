@@ -16,6 +16,12 @@ if __name__ == "__main__":
     for email in emails_unique:
         data = df.loc[df["email"] == email]
         certificados_gerados = generate_certificados(data)
-        recipient = data["email"]
-        recieve = data["nome"][0]
-        send_email(recieve, recipient, certificados_gerados)
+        if isinstance(data["nome"], pd.Series):
+            recieve = data["nome"].iloc[0]
+        else:
+            recieve = data["nome"]
+        if isinstance(data["email"],  pd.Series):
+            recipient = data["email"].iloc[0]
+        else:
+            recipient = data["email"]
+        #send_email(recieve, recipient, certificados_gerados)

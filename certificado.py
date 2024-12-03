@@ -1,9 +1,8 @@
 """Gera os certificaso e salva em um pdf conforme nome"""
-import math
 import os
 from xhtml2pdf import pisa             # import python module
 from modelos import tipos, SOURCE_HTML
-
+import pandas as pd
 
 def check_and_create_cert_dir():
     """
@@ -19,14 +18,13 @@ def check_and_create_cert_dir():
 def get_text_certificado(data):
     """ Funçao para gerar o texto do certificado """
     tipo_unico = [
-        "participante",
-        "palestrante",
-        "organizador"
+        "Ouvinte",
+        "organizacao",
+        "tecnico"
         ]
     matricula_texto = ''
-
-    if not math.isnan(data.matricula) and isinstance(data.matricula, float):
-        matricula_texto = f' matricula <strong><i>{int(data.matricula)}</i></strong>, '
+    if not pd.isna(data.matricula):
+        matricula_texto = f' matricula <strong><i>{data.matricula}</i></strong>, '
 
     if data["tipo"] in tipo_unico:
         texto = tipos[data["tipo"]].format(data["nome"], matricula_texto)

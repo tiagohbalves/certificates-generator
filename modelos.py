@@ -1,22 +1,28 @@
 """Modulo com as definiçoes de tipo de certificado"""
 
 tipos = {
-    "participante": """
+    "Ouvinte": """
       Certificamos que <strong><i>{}</i></strong>,{}
        participou do <strong>III Encontro Capixaba
         de Física/SBF (III ECF/SBF)</strong>, realizado na Universidade Federal
         do Espírito Santo, campus de São Mateus, no período de 30 de outubro
         de 2024 a 01 de novembro de 2024.""",
+    "tecnico": """
+      Certificamos que <strong><i>{}</i></strong>,{}
+       atuou como técnico de som e transmisao do <strong>III Encontro Capixaba
+        de Física/SBF (III ECF/SBF)</strong>, realizado na Universidade Federal
+        do Espírito Santo, campus de São Mateus, no período de 30 de outubro
+        de 2024 a 01 de novembro de 2024.""",
     "poster": """
       Certificamos que o trabalho de título <strong><i>{}</i></strong>,
-        foi apresentado por <strong><i>{}</i></strong>,{} na forma de
+        foi apresentado por <strong><i>{}</i></strong>, na forma de
         <strong>Pôster</strong> no <strong>III Encontro Capixaba
         de Física/SBF (III ECF/SBF)</strong>, realizado na Universidade
         Federal do Espírito Santo, campus de São Mateus, no período de 30 de
         outubro de 2024 a 01 de novembro de 2024.""",
-    "comunicaco": """
+    "comunicacao": """
       Certificamos que o trabalho de título <strong><i>{}</i></strong>,
-        foi apresentado por <strong><i>{}</i></strong>,{} na forma de
+        foi apresentado por <strong><i>{}</i></strong>, na forma de
         <strong>Comunicação Oral</strong> no
         <strong>III Encontro Capixaba
         de Física/SBF (III ECF/SBF)</strong>, realizado na Universidade Federal
@@ -28,7 +34,7 @@ tipos = {
         de Física/SBF (III ECF/SBF)</strong>, realizado na Universidade Federal
         do Espírito Santo, campus de São Mateus, no período de 30 de outubro
         de 2024 a 01 de novembro de 2024.""",
-    "organizador": """
+    "organizacao": """
       Certificamos que <strong><i>{}</i></strong>,{} participou da
       <strong>Organização</strong> do <strong>III Encontro Capixaba
         de Física/SBF (III ECF/SBF)</strong>, realizado na Universidade Federal
