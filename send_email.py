@@ -10,7 +10,15 @@ from modelos import EMAIL_DEF
 
 
 def send_email(recieve, recipients, certificate_files):
-    """Envia email usando o google"""
+    """
+        Function to send email with attachments of certificates.
+        Send multiple certificates if needed. 
+        Pay attention to email limits for attachments. 25MB per email on Gmail.
+        Arguments:
+            recieve : Name of the recipient
+            recipients : Email address or list of email addresses
+            certificate_files : List of certificate file paths to attach
+    """
     load_dotenv()
     password = os.getenv('PASS')
     sender = os.getenv('EMAIL')
@@ -18,9 +26,8 @@ def send_email(recieve, recipients, certificate_files):
 
     body_msg = MIMEText((EMAIL_DEF['email_body'] % recieve), 'html')
     message['From'] = sender
-    message['To'] = ', '.join(recipients)
+    message['To'] = recipients if isinstance(recipients, str) else ', '.join(recipients)
     message["Subject"] = EMAIL_DEF["emai_subject"]
-
     message.attach(body_msg)
     with open('log-sbf.png', 'rb') as fp:
         msg_image = MIMEImage(fp.read())
